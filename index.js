@@ -5,8 +5,7 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
     document.getElementById("author").textContent = `Image by: ${data.user.name}`
   })
   .catch(err => {
-    document.body.style.backgroundImage = `url(https://images.unsplash.com/photo-1533577116850-9cc66cad8a9b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxNDI0NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDQwNDEzNTZ8&ixlib=rb-4.0.3&q=85
-    )`
+    document.body.style.backgroundImage = `url(https://images.unsplash.com/photo-1533577116850-9cc66cad8a9b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxNDI0NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDQwNDEzNTZ8&ixlib=rb-4.0.3&q=85)`
 
     document.getElementById("author").textContent = 'Image by: Claire C'
 
@@ -38,7 +37,9 @@ function getCurrentTime(){
 }
 
 setInterval(getCurrentTime,1000)
+function getCurrentDate(){
 
+}
 navigator.geolocation.getCurrentPosition(position => {
   fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial`)
     .then(res => {
@@ -49,13 +50,11 @@ navigator.geolocation.getCurrentPosition(position => {
     })
     .then(data => {
       const iconUrl = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
-      document.getElementById("weather-top").innerHTML =`
+      document.getElementById("weather").innerHTML =`
         <img src=${iconUrl} />
-        <p>${Math.round(data.main.temp)}º</p>
+        <p class="weather-temp">${Math.round(data.main.temp)}º</p>
+        <p class="weather-city">${data.name}</p>
       `
-      document.getElementById("weather").innerHTML += `
-      <p>${data.name}</p>
-  `
     })
     .catch(err => console.log(err))
 })
