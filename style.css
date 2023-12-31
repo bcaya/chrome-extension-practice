@@ -31,15 +31,24 @@ h1.time {
   text-align: center;
 }
 
-div#crypto-info {
+div#crypto-info,
+div#weather-top {
   font-size:1.3rem;
 }
 
-div#crypto-info > p {
+div#crypto-info,
+div#weather-top > p {
   margin: 0;
+
 }
 
-div#crypto-top {
+div#weather > p {
+  text-align: center;
+  margin:0;
+  font-size:1.3rem;
+}
+div#crypto-top,
+div#weather-top {
   display:flex;
   align-items:center;
   margin-bottom: 5px;
@@ -48,3 +57,6 @@ div#crypto-top {
 div#crypto-top {
   margin-left:10px;
 }
+
+
+
