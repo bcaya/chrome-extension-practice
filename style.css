@@ -5,9 +5,6 @@
 body {
   margin:0;
   background: no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   color:whitesmoke;
   font-family: 'Roboto', sans-serif;
@@ -34,16 +31,14 @@ h2.time {
 }
 
 h1.time{
-  font-size:3em;
+  font-size:5rem;
 }
 
 h2.time{
-  font-size:1.5em;
+  font-size:1.5rem;
   margin:0;
   padding:0;
 }
-
-
 
 div#crypto-info{
   font-size:1.3rem;
@@ -79,6 +74,7 @@ p.weather-city {
   text-align: right;
   margin: 0;
   margin-top: -15px;
+  font-size:1.5rem;
 }
 
 p.weather-temp {
