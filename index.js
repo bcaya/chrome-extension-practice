@@ -37,9 +37,15 @@ function getCurrentTime(){
 }
 
 setInterval(getCurrentTime,1000)
-function getCurrentDate(){
+const e = new Date();
+const options = {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+};
 
-}
+document.getElementById("date").textContent = e.toLocaleDateString(undefined, options)
 navigator.geolocation.getCurrentPosition(position => {
   fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial`)
     .then(res => {

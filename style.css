@@ -27,9 +27,23 @@ div.top {
   justify-content: space-between;
 }
 
-h1.time {
+h1.time,
+h2.time {
   text-align: center;
+  
 }
+
+h1.time{
+  font-size:3em;
+}
+
+h2.time{
+  font-size:1.5em;
+  margin:0;
+  padding:0;
+}
+
+
 
 div#crypto-info{
   font-size:1.3rem;
